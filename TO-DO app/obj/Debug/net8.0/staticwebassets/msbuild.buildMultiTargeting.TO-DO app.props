@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\TO-DO app.props" />
+</Project>

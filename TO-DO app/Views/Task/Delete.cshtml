@@ -1,0 +1,16 @@
+﻿@model ToDoApp.Models.TaskModel
+
+
+<div class="container">
+    <h2> Delete Task</h2>
+    <p>Are you sure you want to delete the task "<strong>@Model.Title</strong>"?</p>
+    <form asp-action="DeleteConfirmed">
+        <input type="hidden" asp-for="TaskID">
+        <button type="submit" class="btn btn-danger">
+            <i class="fas fa-trash"></i> Delete
+        </button>
+        <a href="/Task/Index" class="btn btn-secondary">
+            <i class="fas fa-times"></i> Cancel
+        </a>
+    </form>
+</div>
