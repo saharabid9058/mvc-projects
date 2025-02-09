@@ -1,0 +1,85 @@
+﻿@model RecipeManager.Models.Recipe
+
+@{
+    ViewData["Title"] = "Recipe Details";
+}
+
+<div class="container mt-5">
+    <h1 class="text-center text-dark mb-4">@ViewData["Title"]</h1>
+    <div class="card shadow-lg rounded-lg">
+        <div class="card-header bg-info text-white">
+            <h3 class="text-center">@Model.Name</h3>
+        </div>
+        <div class="card-body">
+            <div class="mb-4">
+                <p><strong>Ingredients:</strong></p>
+                <p class="text-muted">@Model.Ingredients</p>
+            </div>
+
+            <div class="mb-4">
+                <p><strong>Instructions:</strong></p>
+                <p class="text-muted">@Model.Instructions</p>
+            </div>
+
+            <div class="mb-4">
+                <p><strong>Cooking Time:</strong> @Model.CookingTime minutes</p>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center mt-4">
+        <a href="@Url.Action("Index", "Recipe")" class="btn btn-primary btn-lg">
+            <i class="bi bi-arrow-left-circle me-2"></i> Back to Recipes
+        </a>
+    </div>
+</div>
+<style>
+    body {
+        background-color: #f7f8fa;
+        font-family: 'Arial', sans-serif;
+        color: #333;
+    }
+
+    .container {
+        max-width: 800px;
+    }
+
+    .card {
+        border-radius: 15px;
+        border: none;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-header {
+        padding: 20px;
+        background-color: #17a2b8;
+        border-radius: 15px 15px 0 0;
+    }
+
+    .card-body {
+        padding: 30px;
+    }
+
+    .text-muted {
+        color: #6c757d;
+    }
+
+    .btn-lg {
+        padding: 12px 25px;
+        font-size: 1.1rem;
+        border-radius: 25px;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border: none;
+        transition: background-color 0.3s;
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+    .bi {
+        font-size: 1.5rem;
+    }
+</style>

@@ -1,0 +1,108 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<style>
+    body {
+        background: url('https://www.w3schools.com/w3images/coffee.jpg') no-repeat center center fixed;
+        background-size: cover;
+        color: #fff;
+        font-family: 'Arial', sans-serif;
+    }
+    .hero-section {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.5); 
+    }
+    .hero-content h1 {
+        font-size: 3.5rem;
+        font-weight: bold;
+        color: #fff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    }
+    .hero-content p {
+        font-size: 1.25rem;
+        color: #ddd;
+        margin-top: 10px;
+    }
+    .hero-content a {
+        margin-top: 20px;
+        padding: 15px 30px;
+        font-size: 1.2rem;
+        background-color: #4CAF50;
+        border-radius: 25px;
+        text-decoration: none;
+        color: #fff;
+        transition: background-color 0.3s;
+    }
+        .hero-content a:hover {
+            background-color: #45a049;
+        }
+    .featured-recipes h2 {
+        font-size: 2.8rem;
+        color: #333;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+    .card {
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+    }
+        .card:hover {
+            transform: scale(1.05);
+        }
+    .card-img-top {
+        height: 250px;
+        object-fit: cover;
+    }
+   .card-body {
+        padding: 20px;
+    }
+  .card-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #333;
+    }
+    .card-text {
+        color: #666;
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+    .btn-success {
+        background-color: #28a745;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 30px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+        .btn-success:hover {
+            background-color: #218838;
+        }
+</style>
+<div class="hero-section">
+    <div class="hero-content">
+        <h1>Welcome to Recipe Manager</h1>
+        <p>Manage your recipes in a simple and organized way.</p>
+        <a href="@Url.Action("Index", "Recipe")" class="btn btn-light btn-lg">Get Started</a>
+    </div>
+</div>
+<div class="container my-5 featured-recipes">
+    <h2 class="text-center mb-5">Featured Recipes</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://www.w3schools.com/w3images/chefspecial.jpg" class="card-img-top" alt="Recipe">
+                <div class="card-body">
+                    <h5 class="card-title">Recipe Name</h5>
+                    <p class="card-text">Short description of the recipe.</p>
+                    <a href="#" class="btn btn-success">View Recipe</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

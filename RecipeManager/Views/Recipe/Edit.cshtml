@@ -1,0 +1,84 @@
+﻿@model RecipeManager.Models.Recipe
+
+@{
+    ViewData["Title"] = "Edit Recipe";
+}
+<div class="container mt-4">
+    <h1 class="text-center text-dark mb-4">@ViewData["Title"]</h1>
+    <form asp-action="Edit">
+        <div class="mb-3">
+            <label for="Name" class="form-label text-dark">Recipe Name</label>
+            <input type="text" class="form-control" id="Name" asp-for="Name" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label for="Ingredients" class="form-label text-dark">Ingredients</label>
+            <textarea class="form-control" id="Ingredients" asp-for="Ingredients"></textarea>
+            <span asp-validation-for="Ingredients" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label for="Instructions" class="form-label text-dark">Instructions</label>
+            <textarea class="form-control" id="Instructions" asp-for="Instructions"></textarea>
+            <span asp-validation-for="Instructions" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label for="CookingTime" class="form-label text-dark">Cooking Time (minutes)</label>
+            <input type="number" class="form-control" id="CookingTime" asp-for="CookingTime" />
+            <span asp-validation-for="CookingTime" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-warning btn-lg">
+            <i class="bi bi-pencil me-2"></i>Update Recipe
+        </button>
+    </form>
+</div>
+<style>
+    body {
+        background-color: #f7f8fa;
+        font-family: 'Arial', sans-serif;
+        color: #333; 
+    }
+
+    .container {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-label {
+        font-weight: bold;
+        color: #495057; 
+    }
+
+    .form-control {
+        border-radius: 8px;
+        border: 1px solid #ced4da;
+        font-size: 1rem;
+    }
+
+    .btn-warning {
+        background-color: #ffc107;
+        border: none;
+        transition: background-color 0.3s;
+    }
+
+        .btn-warning:hover {
+            background-color: #e0a800;
+        }
+
+    .bi {
+        font-size: 1.3rem;
+    }
+
+    .text-dark {
+        color: #343a40 !important; 
+    }
+
+    .text-danger {
+        color: #dc3545;
+    }
+</style>

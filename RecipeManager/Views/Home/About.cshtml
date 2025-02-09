@@ -1,0 +1,68 @@
+﻿@{
+    ViewData["Title"] = "About Us";
+}
+
+<div class="container-fluid bg-gradient-primary" style="background: linear-gradient(135deg, #ff7e5f, #feb47b); height: 100vh;">
+    <div class="container mt-5">
+        <h1 class="text-dark text-center">About Us</h1>
+
+        <div class="card shadow-lg mb-4">
+            <div class="card-header bg-info text-dark">
+                <h3>Welcome to Recipe Manager!</h3>
+            </div>
+            <div class="card-body text-dark">
+                <p>
+                    We are passionate about making your cooking experience easier and more enjoyable.
+                    Our Recipe Manager is designed to help you store, organize, and manage your recipes.
+                    Whether you're an amateur cook or a seasoned chef, our platform has everything you need
+                    to create, explore, and share your favorite dishes with others.
+                </p>
+            </div>
+        </div>
+        <div class="card shadow-lg mb-4">
+            <div class="card-header bg-success text-dark">
+                <h4>Our Mission</h4>
+            </div>
+            <div class="card-body text-dark">
+                <p>
+                    Our mission is to provide a simple, user-friendly platform where individuals can store and organize their recipes.
+                    We aim to inspire people to try new dishes, experiment in the kitchen, and share their culinary creations with others.
+                </p>
+            </div>
+        </div>
+        <div class="card shadow-lg mb-4">
+            <div class="card-header bg-purple text-dark">
+                <h4>Our Vision</h4>
+            </div>
+            <div class="card-body text-dark">
+                <p>
+                    We envision a world where every individual has access to an easy-to-use tool to help them manage their culinary passion.
+                    We aspire to be the leading platform for recipe management, helping people create delicious meals and develop cooking skills.
+                </p>
+            </div>
+        </div>
+
+        <div class="card shadow-lg mb-4">
+            <div class="card-header bg-warning text-dark">
+                <h4>Our Team</h4>
+            </div>
+            <div class="card-body text-dark">
+                <p>
+                    Our team consists of passionate developers and food enthusiasts who are dedicated to bringing you the best recipe management experience.
+                    We work hard to keep the platform simple, efficient, and fun to use.
+                </p>
+                <ul class="list-unstyled">
+                    <li><i class="bi bi-person-circle"></i> John Doe - Founder & Developer</li>
+                    <li><i class="bi bi-person-circle"></i> Jane Smith - Lead Designer</li>
+                    <li><i class="bi bi-person-circle"></i> Alex Brown - Marketing Manager</li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <a href="@Url.Action("Index", "Home")" class="btn btn-light btn-lg">
+                <i class="bi bi-house-door"></i> Back to Home
+            </a>
+        </div>
+    </div>
+</div>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">

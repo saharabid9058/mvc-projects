@@ -1,0 +1,52 @@
+﻿@{
+    ViewData["Title"] = "Contact Us";
+}
+<div class="container my-5">
+    <h1 class="text-center mb-5" style="font-size: 3.5rem; font-weight: bold; color: #333;">@ViewData["Title"]</h1>
+
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg" style="border-radius: 20px; background-color: #fff;">
+                <div class="card-header text-white" style="background-color: #4CAF50; border-radius: 20px 20px 0 0;">
+                    <h4 class="text-center" style="font-size: 1.75rem;">We're Here to Help!</h4>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title mb-4" style="color: #4CAF50; font-size: 1.5rem;">Contact Information</h5>
+                    <p class="card-text" style="font-size: 1.125rem; color: #555;">Feel free to reach out to us anytime! Here's how you can get in touch with our team:</p>
+
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center" style="font-size: 1.125rem; color: #333;">
+                            <strong>Email:</strong> <a href="mailto:info@recipe-manager.com" class="text-decoration-none text-success">info@recipe-manager.com</a>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center" style="font-size: 1.125rem; color: #333;">
+                            <strong>Phone:</strong> +123 456 7890
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center" style="font-size: 1.125rem; color: #333;">
+                            <strong>Address:</strong> 123 Culinary Street, Food City, 98765
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-footer text-center" style="background-color: #f8f9fa; border-radius: 0 0 20px 20px;">
+                    <a href="@Url.Action("Index", "Home")" class="btn btn-success btn-lg" style="padding: 12px 30px; font-size: 1.25rem; border-radius: 50px; transition: background-color 0.3s ease;">
+                        Back to Home
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    body {
+        background: url('https://www.w3schools.com/w3images/coffee.jpg') no-repeat center center fixed;
+        background-size: cover;
+        font-family: 'Arial', sans-serif;
+    }
+
+    .card {
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-success:hover {
+        background-color: #45a049;
+    }
+</style>
